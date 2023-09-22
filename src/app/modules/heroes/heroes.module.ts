@@ -6,7 +6,7 @@ import { LayoutHeroeComponent } from './components/layout-heroe.component';
 import { ListHeroesComponent } from './components/list-heroes/list-heroes.component';
 import { SearchHeroesComponent } from './components/search-heroes/search-heroes.component';
 import { CreateHeroeComponent } from './components/create-heroe/create-heroe.component';
-import { HomeHeroeComponent } from './components/home-heroe/home-heroe.component';
+import { HeroeIdComponent } from './components/heroe-id/heroe-id.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { HomeHeroeComponent } from './components/home-heroe/home-heroe.component
     ListHeroesComponent,
     SearchHeroesComponent,
     CreateHeroeComponent,
-    HomeHeroeComponent,
+    HeroeIdComponent,
   ],
   imports: [CommonModule, HeroesRoutingModule],
 })
