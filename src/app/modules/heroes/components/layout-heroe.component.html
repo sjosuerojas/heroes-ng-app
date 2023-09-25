@@ -1,2 +1,31 @@
-<p>layout-heroe works!</p>
-<router-outlet></router-outlet>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push" class="sidenav-hero">
+    <mat-toolbar color="primary" class="flex justify-content-between">
+      <span>Menu</span>
+      <button mat-icon-button type="button" (click)="sidenav.toggle()">
+        <mat-icon>arrow_back_ios_new</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let link of sidenavItems"
+        [routerLink]="link.url"
+        [activated]="link.isActive"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
+        {{ link.label }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button type="button" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <main class="container">
+    <router-outlet></router-outlet>
+  </main>
+</mat-sidenav-container>
