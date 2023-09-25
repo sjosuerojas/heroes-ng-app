@@ -1,0 +1,20 @@
+<div class="flex flex-column">
+  <span class="text-lg mb-4">Sign In</span>
+  <mat-form-field>
+    <mat-label>User</mat-label>
+    <input type="text" placeholder="Username" matInput />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input type="password" placeholder="Password" matInput />
+  </mat-form-field>
+
+  <button mat-button mat-raised-button color="primary" class="p-4">
+    Log In
+  </button>
+
+  <div class="flex justify-content-end mt-5">
+    <a routerLink="/auth/sign-up">Already have an account?</a>
+  </div>
+</div>
