@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UiModule } from '../ui/ui.module';
-import { HeroesRoutingModule } from './routes/heroes-routing.module';
+import { UiModule } from '@ui/ui.module';
+import { HeroesRoutingModule } from '@heroes/routes/heroes-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
-import { LayoutHeroeComponent } from './components/layout-heroe.component';
-import { ListHeroesComponent } from './components/list-heroes/list-heroes.component';
-import { SearchHeroesComponent } from './components/search-heroes/search-heroes.component';
-import { CreateHeroeComponent } from './components/create-heroe/create-heroe.component';
-import { HeroeIdComponent } from './components/heroe-id/heroe-id.component';
+import { LayoutHeroeComponent } from '@heroes/views/layout-heroe.component';
+import { ListHeroesComponent } from '@heroes/views/list-heroes/list-heroes.component';
+import { SearchHeroesComponent } from '@heroes/views/search-heroes/search-heroes.component';
+import { CreateHeroeComponent } from '@heroes/views/create-heroe/create-heroe.component';
+import { HeroeIdComponent } from '@heroes/views/heroe-id/heroe-id.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,6 @@ import { HeroeIdComponent } from './components/heroe-id/heroe-id.component';
     CreateHeroeComponent,
     HeroeIdComponent,
   ],
-  imports: [CommonModule, HeroesRoutingModule, UiModule],
+  imports: [CommonModule, HeroesRoutingModule, UiModule, HttpClientModule],
 })
 export class HeroesModule {}

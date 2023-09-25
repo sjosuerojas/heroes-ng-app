@@ -33,6 +33,9 @@
       "@heroes/*": [
         "src/app/modules/heroes/*"
       ],
+      "@ui/*": [
+        "src/app/modules/ui/*"
+      ],
       "@shared/*": [
         "src/app/modules/shared/*"
       ],
