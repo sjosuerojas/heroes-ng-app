@@ -1,0 +1,6 @@
+.hero-apperance {
+  white-space: nowrap;
+  width: 263px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

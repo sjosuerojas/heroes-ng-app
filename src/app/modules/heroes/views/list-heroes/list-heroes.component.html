@@ -1,13 +1,12 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title> Title </mat-card-title>
-    <mat-card-subtitle> Alter Ego </mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content class="mt-2">
-    <h4>Publisher:</h4>
-    <p>First apperance:</p>
-    <mat-chip-listbox>
-      <mat-chip> characters </mat-chip>
-    </mat-chip-listbox>
-  </mat-card-content>
-</mat-card>
+<div class="container p-4">
+  <h1>List Heroes</h1>
+  <mat-divider></mat-divider>
+  <div class="grid bm-8">
+    <div
+      *ngFor="let hero of heroes"
+      class="col-12 sm:col-4 md:col-4 xl:col-2 pt-4"
+    >
+      <app-card-hero [hero]="hero"></app-card-hero>
+    </div>
+  </div>
+</div>
